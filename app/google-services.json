@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "783732130821",
+    "project_id": "imap-40d18",
+    "storage_bucket": "imap-40d18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783732130821:android:247d888c5132dcafd6c86c",
+        "android_client_info": {
+          "package_name": "com.example.imap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783732130821-cshn4secbrlvu9v96cn3q29amr8691u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3cDK1Cw0SS1T_GgMFOLeGOoQCzli_HD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783732130821-cshn4secbrlvu9v96cn3q29amr8691u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
