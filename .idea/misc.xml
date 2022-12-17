@@ -12,11 +12,15 @@
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/haft_conner.xml" value="0.14" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/ic_add.xml" value="0.1545" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/ic_angle_left.xml" value="0.1545" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.173" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/ic_camera.xml" value="0.173" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.103" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/ic_marker.xml" value="0.173" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/item_selected.xml" value="0.174" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/round_conner.xml" value="0.1635" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/round_line.xml" value="0.1375" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/drawable/top_conner.xml" value="0.174" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/activity_add_places.xml" value="0.209375" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/activity_flash.xml" value="0.22447916666666667" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/activity_log_in.xml" value="0.22083333333333333" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/activity_main.xml" value="0.21041666666666667" />
@@ -34,7 +38,10 @@
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/fragment_frag__sign_up.xml" value="0.22" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/fragment_frag_add_place.xml" value="0.209375" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/fragment_main.xml" value="0.14791666666666667" />
-        <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/fragment_maps_home.xml" value="0.18" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/fragment_maps_home.xml" value="0.25" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/layout_item_places.xml" value="0.209375" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/marker_layout.xml" value="0.5" />
+        <entry key="..\:/PROJECT/projectXX/app/src/main/res/layout/toolbar_add.xml" value="0.25" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/menu/menu_bottom_main.xml" value="0.22083333333333333" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.103" />
         <entry key="..\:/PROJECT/projectXX/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.103" />

@@ -26,37 +26,40 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_line"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_conner"
         android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/map"
         app:layout_constraintTop_toTopOf="@+id/map"
-        app:layout_constraintVertical_bias="0.039">
+        app:layout_constraintVertical_bias="0.04">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <SearchView
+            android:id="@+id/searchview"
             android:layout_gravity="center"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="20dp"
-            android:gravity="center"
-            android:text="iMap"
-            android:textColor="#BCECBE"
-            android:textSize="18sp" />
-
-        <androidx.appcompat.widget.SearchView
-
             android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/haft_conner" />
+            android:layout_height="match_parent"
+            android:queryHint="Search..."
+            android:background="@drawable/haft_conner"
+            android:iconifiedByDefault="false"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="iMap"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gluten_light"/>
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     <ImageButton
         android:id="@+id/btn_location"
@@ -69,24 +72,25 @@
         android:src="@drawable/ic_baseline_my_location_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <ImageButton
         android:id="@+id/btn_layer"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/haft_conner"
+        android:padding="8dp"
         android:elevation="5dp"
         android:src="@drawable/ic_layers"
         app:layout_constraintBottom_toBottomOf="@+id/map"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <ImageButton
         android:id="@+id/btn_addPlaces"
@@ -102,6 +106,18 @@
         app:layout_constraintTop_toTopOf="@+id/map"
         app:layout_constraintVertical_bias="0.735" />
 
+    <ImageButton
+        android:id="@+id/btn_direc"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/haft_conner"
+        android:src="@drawable/ic_directions"
+        app:layout_constraintBottom_toTopOf="@+id/btn_addPlaces"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_layer"
+        app:layout_constraintVertical_bias="0.867" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

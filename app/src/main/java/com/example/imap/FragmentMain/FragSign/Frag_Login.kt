@@ -42,6 +42,7 @@ class Frag_Login : Fragment() {
             firebaseAuth.signInWithEmailAndPassword(email, passWord).addOnCompleteListener {
                 if (it.isSuccessful) {
                     val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
+                    firebaseUser?.sendEmailVerification()
                     if (firebaseUser != null) {
                         if (firebaseUser.isEmailVerified) {
                             val intent = Intent(requireContext(), MainActivity::class.java)
@@ -61,13 +62,8 @@ class Frag_Login : Fragment() {
 
                                 dialog.dismiss()
                             }
-
-
-
                             val alert = builder.create()
                             alert.show()
-
-
                         }
                     }
 

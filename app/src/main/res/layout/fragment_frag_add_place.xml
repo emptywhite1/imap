@@ -4,29 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frag_add_place">
+    tools:context=".FragmentMain.AddPlaces.frag_add_place">
+
+    <include
+        layout="@layout/toolbar_add"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
 
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:hint="coordinates X"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31"
-        android:hint="coordinates X"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_x"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintVertical_bias="0.31"/>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
         style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -64,21 +66,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:hint="coordinates Y"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        android:hint="coordinates Y"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_y"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintVertical_bias="0.4"/>
 
     <Button
         android:id="@+id/btn_finish"
@@ -92,6 +88,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:layout_constraintVertical_bias="0.253" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="add"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.731" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

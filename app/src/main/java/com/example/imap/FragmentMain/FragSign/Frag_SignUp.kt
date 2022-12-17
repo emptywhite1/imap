@@ -1,34 +1,21 @@
 package com.example.imap.FragmentMain.FragSign
 
-import android.annotation.SuppressLint
-import android.app.ProgressDialog.show
-import android.content.Context
-import android.content.Intent
-import android.content.res.Resources
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
-import androidx.annotation.Nullable
-import androidx.appcompat.widget.AppCompatDrawableManager
 
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
-import com.example.imap.MainActivity
 import com.example.imap.R
-import com.example.imap.User
+import com.example.imap.data.User
 import com.example.imap.databinding.FragmentFragSignUpBinding
 import com.github.razir.progressbutton.*
-import com.google.android.gms.tasks.OnCompleteListener
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase

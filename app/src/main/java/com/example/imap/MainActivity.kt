@@ -20,10 +20,18 @@ import com.example.imap.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.gms.common.api.Status
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.net.PlacesClient
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
+import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 
 class MainActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMainBinding
     private lateinit var navController:NavController
+
+
+
 
 
     private lateinit var permisstionLaucher: ActivityResultLauncher<Array<String>>
@@ -42,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         permisstionLaucher =
             registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissons ->
                 isReadPermissionGrand =
@@ -54,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         requestPermistion()
-
+//        searchPlaces()
     }
 
 //

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_mapsHome_to_frag_Account3"
             app:destination="@id/frag_Account" />
+        <action
+            android:id="@+id/action_mapsHome_to_frag_add_place"
+            app:destination="@id/frag_add_place" />
     </fragment>
     <fragment
         android:id="@+id/frag_History"
@@ -39,6 +42,15 @@
             app:destination="@id/frag_History" />
         <action
             android:id="@+id/action_frag_Account3_to_mapsHome"
+            app:destination="@id/mapsHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_add_place"
+        android:name="com.example.imap.FragmentMain.AddPlaces.frag_add_place"
+        android:label="fragment_frag_add_place"
+        tools:layout="@layout/fragment_frag_add_place" >
+        <action
+            android:id="@+id/action_frag_add_place_to_mapsHome"
             app:destination="@id/mapsHome" />
     </fragment>
 </navigation>

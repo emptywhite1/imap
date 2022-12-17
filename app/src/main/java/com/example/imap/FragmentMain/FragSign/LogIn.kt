@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.imap.Adapter
+import com.example.imap.R
 import com.example.imap.databinding.ActivityLogInBinding
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 interface ViewPagerScroll {
@@ -35,6 +37,8 @@ class LogIn : AppCompatActivity(), ViewPagerScroll {
                 }
 
         }.attach()
+//        val autocompleteFragment : AutocompleteSupportFragment = supportFragmentManager
+//                .findFragmentById(R.id.autocomplete_fragment) as AutocompleteSupportFragment
 
     }
 

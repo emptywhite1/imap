@@ -28,8 +28,8 @@
         android:fontFamily="@font/font10"
         android:gravity="center"
 
-        android:text="Help Map"
-        android:textSize="24sp"
+        android:text="iMap"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         android:textColor="#94B733"
