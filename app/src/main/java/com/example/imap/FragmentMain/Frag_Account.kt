@@ -74,6 +74,9 @@ class Frag_Account : Fragment() {
     private fun logOut() {
         _binding.btnLogout.setOnClickListener {
             firebaseAuth.signOut()
+            val intent=Intent(requireContext(),LogIn::class.java)
+            startActivity(intent)
+            activity?.finish()
         }
     }
 

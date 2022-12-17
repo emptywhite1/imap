@@ -2,6 +2,7 @@ package com.example.imap.FragmentMain
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
@@ -13,13 +14,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.imap.FragmentMain.FragSign.LogIn
+import com.example.imap.FragmentMain.FragSign.ViewPagerScroll
 import com.example.imap.R
 import com.example.imap.data.MyPlaces
 import com.example.imap.databinding.FragmentMapsHomeBinding
+import com.example.imap.requetPermistion
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -180,7 +184,6 @@ class MapsHome : Fragment(), OnMapReadyCallback ,OnMarkerClickListener{
                         places.add(myPlacesData!!)
 
                     }
-                    Log.d("====", "onDataChange: " + places[1].namePlaces)
                     for (i in 0 until places.size) {
                         mgoogleMap.addMarker(
                             MarkerOptions().position(
@@ -232,6 +235,9 @@ class MapsHome : Fragment(), OnMapReadyCallback ,OnMarkerClickListener{
     }
 
     override fun onMapReady(p0: GoogleMap) {
+        if (requireActivity() is requetPermistion) {
+            (requireActivity() as requetPermistion).requestPermistion()
+        }
         mgoogleMap = p0
         onChangeMapType()
         setUpMap()

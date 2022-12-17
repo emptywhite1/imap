@@ -11,9 +11,6 @@
         android:label="fragment_maps_home"
         tools:layout="@layout/fragment_maps_home" >
         <action
-            android:id="@+id/action_mapsHome_to_frag_History"
-            app:destination="@id/frag_History" />
-        <action
             android:id="@+id/action_mapsHome_to_frag_Account3"
             app:destination="@id/frag_Account" />
         <action
@@ -21,25 +18,10 @@
             app:destination="@id/frag_add_place" />
     </fragment>
     <fragment
-        android:id="@+id/frag_History"
-        android:name="com.example.imap.FragmentMain.Frag_History"
-        android:label="fragment_frag__history"
-        tools:layout="@layout/fragment_frag__history" >
-        <action
-            android:id="@+id/action_frag_History_to_frag_Account3"
-            app:destination="@id/frag_Account" />
-        <action
-            android:id="@+id/action_frag_History_to_mapsHome"
-            app:destination="@id/mapsHome" />
-    </fragment>
-    <fragment
         android:id="@+id/frag_Account"
         android:name="com.example.imap.FragmentMain.Frag_Account"
         android:label="fragment_frag__account"
         tools:layout="@layout/fragment_frag__account" >
-        <action
-            android:id="@+id/action_frag_Account3_to_frag_History"
-            app:destination="@id/frag_History" />
         <action
             android:id="@+id/action_frag_Account3_to_mapsHome"
             app:destination="@id/mapsHome" />

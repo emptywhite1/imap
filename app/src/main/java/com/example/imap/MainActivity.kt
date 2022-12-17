@@ -14,7 +14,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.imap.FragmentMain.FragSign.Frag_Login
 import com.example.imap.FragmentMain.FragSign.Frag_SignUp
-import com.example.imap.FragmentMain.Frag_History
 import com.example.imap.FragmentMain.MapsHome
 import com.example.imap.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -26,7 +25,11 @@ import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 
-class MainActivity : AppCompatActivity() {
+interface requetPermistion{
+  fun  requestPermistion()
+
+}
+class MainActivity : AppCompatActivity() ,requetPermistion{
     private lateinit var _binding: ActivityMainBinding
     private lateinit var navController:NavController
 
@@ -66,10 +69,7 @@ class MainActivity : AppCompatActivity() {
 //        searchPlaces()
     }
 
-//
-
-
-    private fun requestPermistion() {
+    override fun requestPermistion() {
         isReadPermissionGrand = ContextCompat.checkSelfPermission(
             this,
             android.Manifest
@@ -95,5 +95,10 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+//
+
+
+
 
 }

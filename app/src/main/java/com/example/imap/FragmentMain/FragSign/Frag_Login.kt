@@ -3,9 +3,11 @@ package com.example.imap.FragmentMain.FragSign
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.imap.MainActivity
 import com.example.imap.databinding.FragmentFragLoginBinding
@@ -35,42 +37,21 @@ class Frag_Login : Fragment() {
     }
 
     private fun onClickSignIn() {
-        email = _binding.edtEmail.text.toString().trim()
-        passWord = _binding.edtPass.text.toString().trim()
+
+
 
         _binding.btnLogin.setOnClickListener {
-            firebaseAuth.signInWithEmailAndPassword(email, passWord).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
-                    firebaseUser?.sendEmailVerification()
-                    if (firebaseUser != null) {
-                        if (firebaseUser.isEmailVerified) {
-                            val intent = Intent(requireContext(), MainActivity::class.java)
-                            startActivity(intent)
-                            activity?.finish()
-                        } else {
-                            firebaseAuth.signOut()
-                            firebaseUser.sendEmailVerification()
-                            val builder = AlertDialog.Builder(requireContext())
+            email = _binding.edtEmail.text.toString().trim()
+            passWord = _binding.edtPass.text.toString().trim()
+            Log.d("vvvvvvvvvvv", "onClickSignIn: $email $passWord")
+           firebaseAuth.signInWithEmailAndPassword(email,passWord).addOnCompleteListener {
+               if (it.isSuccessful){
 
-                            builder.setTitle("Email verification")
-                            builder.setMessage("You have not verified your email. Please check your Email !!!")
-
-                            builder.setPositiveButton(
-                                "YES"
-                            ) { dialog, which -> // Do nothing but close the dialog
-
-                                dialog.dismiss()
-                            }
-                            val alert = builder.create()
-                            alert.show()
-                        }
-                    }
-
-                } else {
-
-                }
-            }
+                   val intent=Intent(requireContext(),MainActivity::class.java)
+                   startActivity(intent)
+                   activity?.finish()
+               }
+           }
         }
     }
 
